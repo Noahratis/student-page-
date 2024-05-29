@@ -69,7 +69,7 @@ header {
     color: white;
     padding: 20px;
     text-align: center;
-    background-image: url('header-background.jpg'); /* Adicione uma imagem de fundo para o cabeçalho */
+    background-image: url('header-background.jpg'); /* Adicionar uma imagem de fundo para o cabeçalho. Pode ser o que você escolher */
     background-size: cover;
     background-position: center;
 }
