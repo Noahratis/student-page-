@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function toggleOtherInput(selectElement, otherInputId) {
+            var otherInput = document.getElementById(otherInputId);
+            if (selectElement.value === 'outros' || selectElement.value === 'sim') {
+                otherInput.style.display = 'block';
+            } else {
+                otherInput.style.display = 'none';
+            }
+        }
+        
+        function toggleCheckboxInput(checkboxElement, inputId) {
+            var inputElement = document.getElementById(inputId);
+            if (checkboxElement.checked || selectElement.value === 'nao') {
+                inputElement.style.display = 'block';
+            } else {
+                inputElement.style.display = 'none';
+            }
+        }
+    </script>
+    <style>
+        .other-gender, .other-deficiency {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <img src="logoteste.png" alt="Logo" class="header-logo">
+                <h1>Perfil do estudante</h1>
+            </div>
+            <nav>
+                <ul>
+                <li><a href="index.html">Login</a></li>
+                <li><a href="about.html">1</a></li>
+                <li><a href="survey.html">2</a></li>
+                <li><a href="motivation.html">3</a></li>        
+                </ul>
+            </nav>
+        </header>
+        
+        <main>
+            <section id="survey">
+                <h2>Social</h2>
+                <form id="survey-form">
+                    <label for="gender">Com qual gênero você se identifica?</label>
+                    <select id="gender" name="gender" required onchange="toggleOtherInput(this, 'other-gender-label')">
+                        <option value="">Selecione um</option>
+                        <option value="Mulher">Mulher</option>
+                        <option value="Homem">Homem</option>
+                        <option value="outros">Outros</option>
+                    </select>
+
+                    <div id="other-gender-label" class="other-gender">
+                        <label for="other-gender">Especificar:</label>
+                        <input type="text" id="other-gender" name="other_gender" placeholder="Especificar outro gênero">
+                    </div>
+                    
+                    <label for="race">Com qual raça você se identifica?</label>
+                    <select id="race" name="race" required>
+                        <option value="">Selecione um</option>
+                        <option value="Branco">Branco</option>
+                        <option value="Negro">Negro</option>
+                        <option value="Parda">Parda</option>
+                        <option value="Amarela">Amarela</option>
+                        <option value="Indigena">Indígena </option>
+                        <option value="Nao dizer">Prefiro não responder</option>
+                    </select>
+                    
+                    <label for="deficiency">Você possui alguma deficiência?</label>
+                    <select id="deficiency" name="deficiency" required onchange="toggleOtherInput(this, 'other-deficiency-label')">
+                        <option value="">Selecione</option>
+                        <option value="nao">Não</option>
+                        <option value="sim">Sim</option>
+                    </select>
+                                       
+                    <div id="other-deficiency-label" class="other-deficiency">
+                        <label for="other-deficiency">Especificar:</label>
+                        <input type="text" id="other-deficiency" name="other_deficiency" placeholder="Especificar deficiência">
+                    </div>              
+                   
+                    <button type="button" onclick="window.location.href='about.html'">Página Anterior</button>
+                    <button type="button" onclick="window.location.href='motivation.html'">Próxima Página</button>
+                </form>
+            </section>
+        </main>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 Noah Ratis. Todos os direitos reservados.</p>
+    </footer>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>

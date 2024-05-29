@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Mim</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function toggleOtherInput(selectElement, otherInputId) {
+            var otherInput = document.getElementById(otherInputId);
+            if (selectElement.value === 'outros' || selectElement.value === 'outros') {
+                otherInput.style.display = 'block';
+            } else {
+                otherInput.style.display = 'none';
+            }
+        }
+    </script>
+    <style>
+        .other-category, .other-bond {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <img src="logoteste.png" alt="Logo" class="header-logo">
+                <h1>Perfil do estudante</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Login</a></li>
+                    <li><a href="about.html">1</a></li>
+                    <li><a href="survey.html">2</a></li>
+                    <li><a href="motivation.html">3</a></li>    
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section id="about">
+                <h2>Sobre mim</h2>
+                <form id="about-form">
+                    <label for="state">Estado:</label>
+                    <select id="state" name="state" required>
+                        <option value="">Selecione um estado</option>
+                    </select>
+                    
+                    <label for="city">Município:</label>
+                    <select id="city" name="city" required>
+                        <option value="">Selecione um município</option>
+                    </select>
+
+                    <label for="category">De qual segmento você faz parte?</label>
+                    <select id="category" name="category" required onchange="toggleOtherInput(this, 'other-category-label')">
+                        <option value="">Selecione uma categoria</option>
+                        <option value="Servidor Estadual de Pernambuco">Servidor Estadual de Pernambuco</option>
+                        <option value="Servidor Municipal de Pernambuco">Servidor Municipal de Pernambuco</option>
+                        <option value="Servidor do TCE/PE">Servidor do TCE/PE</option>
+                        <option value="cidada/cidadao">Cidadãos ou sociedade civil organizada</option>
+                        <option value="Integrante de conselhos de politicas publicas">Integrante de conselhos de políticas públicas</option>
+                        <option value="outros">Outros</option>
+                    </select>
+
+                    <div id="other-category-label" class="other-category">
+                        <label for="other-category">Especificar outro segmento:</label>
+                        <input type="text" id="other-category" name="other_category" placeholder="Especificar outro segmento">
+                    </div>
+
+                    <label for="UJ">De qual órgão você faz parte?</label>
+                    <input type="text" id="UJ" name="UJ" required>
+
+                    <label for="bond">Vínculo:</label>
+                    <select id="bond" name="bond" required onchange="toggleOtherInput(this, 'other-bond-label')">
+                        <option value="">Selecione uma categoria</option>
+                        <option value="Efetivo/Estatutario">Efetivo/Estatutário</option>
+                        <option value="Comissionado">Comissionado</option>
+                        <option value="Contrato Temporario">Contrato Temporário</option>
+                        <option value="Terceirizado">Terceirizado </option>
+                        <option value="Estagio">Estágio</option>
+                        <option value="outros">Outros</option>
+                    </select>
+
+                    <div id="other-bond-label" class="other-bond">
+                        <label for="other-bond">Especificar outro vínculo:</label>
+                        <input type="text" id="other-bond" name="other_bond" placeholder="Especificar outro vínculo">
+                    </div>
+
+                    <button type="button" onclick="window.location.href='index.html'">Página Anterior</button>
+                    <button type="button" onclick="window.location.href='survey.html'">Próxima Página</button>
+                </form>        
+                </form>                
+            </section>
+        </main>
+      
+        <footer>
+            <p>&copy; 2024 Noah Ratis. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

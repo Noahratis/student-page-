@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <img src="logoteste.png" alt="Logo" class="header-logo">
+                <h1>Perfil do estudante</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Login</a></li>
+                    <li><a href="about.html">1</a></li>
+                    <li><a href="survey.html">2</a></li>
+                    <li><a href="motivation.html">3</a></li>        
+                </ul>
+            </nav>
+        </header>
+        
+        <main>
+            <section id="survey">
+                <h2>Motivação</h2>
+                <form>
+                    <label for="reason">Motivo pelo qual escolheu fazer a ação de desenvolvimento (pode assinalar mais de uma opção):</label>
+                    <div id="reason">
+                        <label for="Indicao_do_superior_imediato">
+                            <input type="checkbox" id="Indicao_do_superior_imediato" name="reason" value="Indicao do superior imediato"> 
+                            Indicação da chefia imediata
+                        </label>
+                        <label for="progressao_funcional">
+                            <input type="checkbox" id="progressao" name="reason" value="Progressao funcional">
+                            Progressão funcional
+                        </label>      
+                        <label for="aprimorar_conhecimentos">
+                            <input type="checkbox" id="conhecimento" name="reason" value="Aprimorar conhecimentos">
+                            Aprimorar conhecimentos
+                        </label>
+                    </div>
+                    <br>
+                    <label for="intention">Tenho a intenção de aplicar, no meu trabalho, os conhecimentos e habilidades adquiridos na ação de desenvolvimento:</label>
+                    <select id="intention" name="intention" required>
+                        <option value="">Selecione um</option>
+                        <option value="Nao">Não</option>
+                        <option value="Sim">Sim</option>
+                    </select>   
+                    
+                    <button type="button" onclick="window.location.href='survey.html'">Próxima Página</button>
+                    <button type="submit">Finalizar Inscrição</button>
+                </form>
+            </section>
+        </main>
+    </div>
+    <footer>
+        <p>&copy; 2024 Noah Ratis. Todos os direitos reservados.</p>
+    </footer>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>
